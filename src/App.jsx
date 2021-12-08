@@ -17,8 +17,6 @@ function App() {
     console.log('src: ', src)
     const data = await getSrcDetails(src)
     console.log('details: ', data)
-    // test
-    data.init = 'false'
     setSrcDetails(Object.keys(data))
     setCheckedState(new Array(Object.keys(data).length).fill(false))
     setDisabledState(
