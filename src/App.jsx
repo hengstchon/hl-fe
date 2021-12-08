@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getDst, getSrc, getSrcDetails } from './api'
+import { getDst, getSrc, getSrcDetails, postSubmit } from './api'
 import SelectDialog from './SelectDialog'
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
       details: srcDetails.filter((_, index) => checkedState[index]),
     }
     console.log('data: ', data)
+    postSubmit(data)
   }
 
   return (

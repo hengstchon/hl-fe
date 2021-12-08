@@ -17,3 +17,13 @@ export const getSrcDetails = async src => {
   const data = res.json()
   return data
 }
+
+export const postSubmit = data => {
+  fetch(`${API_BASE}/submit`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+}
